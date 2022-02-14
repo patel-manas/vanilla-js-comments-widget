@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: Tahoma, sans-serif;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  width: min(90%, 1154px);
+  margin: 2rem auto;
+}
+
+.comment__form {
+  margin: 2rem auto;
+  width: 100%;
+}
+
+.comment__form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 50px rgb(190, 188, 188);
+  resize: none;
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.comment__form textarea:focus {
+  outline: none;
+  border: 2px solid #ccc;
+}
+
+.comment__form .comment__control {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.comment__form-reply {
+  margin-top: 1rem;
+}
+.comment__form-reply textarea {
+  width: 100%;
+  height: 80px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 50px rgb(190, 188, 188);
+  resize: none;
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.comment__form-reply textarea:focus {
+  outline: none;
+  border: 2px solid #ccc;
+}
+
+.comment__form-reply .comment__control {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.comment__form .comment__control button,
+.comment__form-reply .comment__control button {
+  height: 30px;
+  width: 100px;
+  border: none;
+  background-color: lightseagreen;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.comments__container {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.comments__container .comments__container {
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.comments__container::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(170, 170, 170);
+  min-height: 100%;
+  width: 1px;
+  left: -10px;
+}
+
+.comment__card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  min-width: 100%;
+  box-shadow: 0 0 50px rgb(190, 188, 188);
+}
+
+.comments__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  opacity: 0.8;
+}
+
+.comments__footer div {
+  cursor: pointer;
+}
