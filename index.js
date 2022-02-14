@@ -69,7 +69,7 @@ const updateComments = (list, id, prop, cb, comment) => {
     } else if (com.id === id) {
       com[prop] = cb(com[prop] || 0);
     } else if (com.children && com.children.length > 0) {
-      updateComments(com.children, id, prop, cb);
+      updateComments(com.children, id, prop, cb, comment);
     }
   });
 
@@ -194,7 +194,7 @@ const generateCommentNode = ({
 
 const renderComments = (comments, root) => {
   comments.forEach((comment) => {
-    let commentNode = generateCommentNode(comment);
+    let commentNode = generateCommentNode(comment || {});
     root.append(commentNode);
     if (comment.children && comment.children.length > 0) {
       renderComments(comment.children, commentNode);
